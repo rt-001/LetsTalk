@@ -3,6 +3,7 @@ const { chats } = require("./data/data");
 const app = express(express);
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
+const chatRoutes = require("./routes/chatRoutes");
 const connectDB = require("./config/db");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 dotenv.config();
@@ -16,6 +17,7 @@ app.listen(PORT, () => {
   console.log(`Backend is running.${PORT}`);
 });
 app.use("/api/user", userRoutes);
+app.use("/api/chat", chatRoutes);
 // Error Handling middlewares
 app.use(notFound);
 app.use(errorHandler);
