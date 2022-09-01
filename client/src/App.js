@@ -5,14 +5,12 @@ import Homepage from "./Pages/Homepage";
 import Chatpage from "./Pages/Chatpage";
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Homepage></Homepage>} />
-          <Route path="/chats" element={<Chatpage></Chatpage>} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Homepage></Homepage>} />
+        <Route path="/chats" element={<Chatpage></Chatpage>} />
+      </Routes>
+    </div>
   );
 }
 
