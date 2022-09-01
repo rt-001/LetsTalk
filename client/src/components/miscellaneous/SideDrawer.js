@@ -139,8 +139,8 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
-          Baate
+        <Text fontSize="3xl" fontFamily="Work sans" color="black" as="b">
+          SpoutChat
         </Text>
         <div>
           <Menu>

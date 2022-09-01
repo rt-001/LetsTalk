@@ -7,7 +7,7 @@ import { getSender } from "../config/ChatLogics";
 import ChatLoading from "./ChatLoading";
 import { Button } from "@chakra-ui/react";
 import { ChatState } from "../Context/ChatProvider";
-
+import GroupChatModal from "./miscellaneous/GroupChatModal.js";
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
 
@@ -48,10 +48,11 @@ const MyChats = ({ fetchAgain }) => {
       <Box
         display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
         flexDir="column"
+        m={0}
         alignItems="center"
         p={3}
         bg="white"
-        w={{ base: "100%", md: "31%" }}
+        w={{ base: "100%", md: "100%" }}
         borderRadius="lg"
         borderWidth="1px"
       >
@@ -66,16 +67,18 @@ const MyChats = ({ fetchAgain }) => {
           alignItems="center"
         >
           My Chats
-          <Button
-            d="flex"
-            fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-            rightIcon={<AddIcon />}
-          >
-            New Group Chat
-          </Button>
+          <GroupChatModal>
+            <Button
+              display="flex"
+              fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+              rightIcon={<AddIcon />}
+            >
+              New Group Chat
+            </Button>
+          </GroupChatModal>
         </Box>
         <Box
-          d="flex"
+          display="flex"
           flexDir="column"
           p={3}
           bg="#F8F8F8"
