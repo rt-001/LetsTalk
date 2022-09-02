@@ -1,3 +1,6 @@
+import React from "react";
+import { useState } from "react";
+
 export const isSameSenderMargin = (messages, m, i, userId) => {
   // console.log(i === messages.length - 1);
 
@@ -39,9 +42,11 @@ export const isSameUser = (messages, m, i) => {
 };
 
 export const getSender = (loggedUser, users) => {
+  // const [userName, setuserName] = useState();
   return users[0]._id === loggedUser._id ? users[1].name : users[0].name;
 };
 
 export const getSenderFull = (loggedUser, users) => {
+  // const [user, setuser] = useState([]);
   return users[0]._id === loggedUser._id ? users[1] : users[0];
 };

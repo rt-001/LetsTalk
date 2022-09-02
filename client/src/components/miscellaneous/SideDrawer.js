@@ -127,6 +127,7 @@ function SideDrawer() {
         style={{ display: "flex" }}
         bg="white"
         w="100%"
+        // h="100%"
         p="5px 10px 5px 10px"
         borderWidth="5px"
         borderStyle="none"
@@ -189,7 +190,7 @@ function SideDrawer() {
                 />
               ))
             )}
-            {loadingChat && <Spinner ml="auto" d="flex" />}
+            {loadingChat && <Spinner ml="auto" display="flex" />}
           </DrawerBody>
         </DrawerContent>
       </Drawer>

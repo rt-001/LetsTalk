@@ -14,7 +14,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { ChatState } from "../../Context/ChatProvider";
-const ProfileModal = ({ children }) => {
+const ProfileModal = ({ usern, children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     setSelectedChat,
@@ -47,7 +47,7 @@ const ProfileModal = ({ children }) => {
             display="flex"
             justifyContent="center"
           >
-            {name}
+            {user.name}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody

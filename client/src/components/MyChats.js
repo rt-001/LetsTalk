@@ -11,7 +11,8 @@ import GroupChatModal from "./miscellaneous/GroupChatModal.js";
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
 
-  const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
+  const { selectedChat, setSelectedChat, user, chats, setChats, name } =
+    ChatState();
 
   const toast = useToast();
 
@@ -53,6 +54,7 @@ const MyChats = ({ fetchAgain }) => {
         p={3}
         bg="white"
         w={{ base: "100%", md: "100%" }}
+        h="100%"
         borderRadius="lg"
         borderWidth="1px"
       >
