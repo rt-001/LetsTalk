@@ -15,7 +15,7 @@ const MyChats = ({ fetchAgain }) => {
     ChatState();
 
   const toast = useToast();
-
+  // console.log("chats ", chats);
   const fetchChats = async () => {
     // console.log(user._id);
     try {
@@ -27,6 +27,7 @@ const MyChats = ({ fetchAgain }) => {
 
       const { data } = await axios.get("/api/chat", config);
       setChats(data);
+      console.log("chats of user", chats);
     } catch (error) {
       toast({
         title: "Error Occured!",
@@ -67,6 +68,7 @@ const MyChats = ({ fetchAgain }) => {
           w="100%"
           justifyContent="space-between"
           alignItems="center"
+          g="20px"
         >
           My Chats
           <GroupChatModal>

@@ -99,6 +99,7 @@ const GroupChatModal = ({ children }) => {
         config
       );
       setChats([data, ...chats]);
+      console.log("user ke new chats ", chats);
       onClose();
       toast({
         title: "New Group Chat Created!",

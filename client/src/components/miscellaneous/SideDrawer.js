@@ -141,7 +141,7 @@ function SideDrawer() {
           </Button>
         </Tooltip>
         <Text fontSize="3xl" fontFamily="Work sans" color="black" as="b">
-          SpoutChat
+          LetsTalk
         </Text>
         <div>
           <Menu>

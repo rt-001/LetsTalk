@@ -18,7 +18,7 @@ const ChatProvider = ({ children }) => {
       const userInfo = await JSON.parse(localStorage.getItem("userInfo"));
       console.log(userInfo, "api call");
       if (userInfo !== undefined) {
-        // console.log(userInfo.name);
+        console.log(userInfo);
         setName(userInfo.name);
         setEmail(userInfo.email);
         setPic(userInfo.pic);

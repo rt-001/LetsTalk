@@ -85,6 +85,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       console.log(data._id);
       // setSelectedChat("");
       setSelectedChat(data);
+      fetchMessages();
       setFetchAgain(!fetchAgain);
       setRenameLoading(false);
     } catch (error) {
@@ -263,9 +264,9 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
             {loading ? (
               <Spinner size="lg" />
             ) : (
-              searchResult?.map((user) => (
+              searchResult?.map((user, i) => (
                 <UserListItem
-                  key={user._id}
+                  key={i}
                   user={user}
                   handleFunction={() => handleAddUser(user)}
                 />
